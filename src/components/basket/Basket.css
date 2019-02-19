@@ -11,9 +11,10 @@
     margin-bottom: 40px;
 }
 
-h2 {
-    margin-bottom: 60px;
+.to_store_btn a {
+    color: red;
 }
+
 
 .advantages {
     display: flex;
@@ -22,6 +23,8 @@ h2 {
     height: 300px;
     background: url("/img/advantages_bottom.png") no-repeat center bottom;
 }
+
+
 
 .advantage_item {
     height: 74px;
@@ -44,7 +47,13 @@ h2 {
     background: url("/img/advantages3.png") no-repeat left top;
 }
 
-footer p {
+.basket_footer {
+    background-color: #ffffff;
+}
+
+.basket_footer_text {
+    color: black;
     margin-top: 40px;
     text-align: center;
+    font-weight: bold;
 }

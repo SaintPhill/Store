@@ -1,16 +1,32 @@
 import React from 'react'
 import './Basket.css'
+import {connect} from "react-redux";
+import {Link} from "react-router-dom";
 
-export default class Basket extends React.Component {
+class Basket extends React.Component {
     render() {
+        let userBasket = this.props.userBasket;
+        let producstText;
+        switch (true) {
+            case (userBasket.length === 1): producstText ='товар';
+                break;
+            case (userBasket.length > 1 && userBasket.length < 5): producstText ='товара';
+                break;
+            case (userBasket.length > 4 ): producstText ='товаров';
+        }
         return (
             <>
                 <header>
                     <div className="container">
                         <div className="headline">
                             <h1>Ваши товары</h1>
-                            <p>Вы выбрали 2 товара: Супер-товар, Тоже хороший товар</p>
-                            <p><a href="/table">Вернуться к покупкам</a></p>
+                            <p>Вы выбрали {userBasket.length} {producstText}: {userBasket.map((el,i) => {
+                                if((i+1) !== userBasket.length) {
+                                    return el.name + ', '
+                                } else return el.name + '.'
+                            })}
+                            </p>
+                            <p className='to_store_btn'><Link to="/">Вернуться к покупкам</Link></p>
                         </div>
                     </div>
                 </header>
@@ -30,12 +46,22 @@ export default class Basket extends React.Component {
                         </div>
                     </div>
                 </section>
-                <footer>
+                <footer className='basket_footer'>
                     <div className="container">
-                        <p>И это всё - для вас!</p>
+                        <p className='basket_footer_text'>И это всё - для вас!</p>
                     </div>
                 </footer>
             </>
         )
     }
 }
+
+function initMapStateToProps(state) {
+    return {
+        userBasket: state.userBasket
+    }
+}
+
+
+
+export default connect(initMapStateToProps)(Basket)

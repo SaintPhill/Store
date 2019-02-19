@@ -4,7 +4,7 @@ import './Table.css'
 export default class Table extends React.Component {
     render() {
         return (
-            <table className='w3-table border-bottom'>
+            <table className='w3-table'>
                 <thead>
                     <tr>
                         <th>
@@ -31,7 +31,7 @@ export default class Table extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                {this.props.products.map((product,id) => {
+                {this.props.products.map((product) => {
                     return (
                         <tr key={product.id}>
                             <td>
@@ -58,8 +58,12 @@ export default class Table extends React.Component {
                                 }
                             </td>
                             <td>
-                                <input type="checkbox" checked={product.checked}/>
-                                <label/>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={this.props.handleCheckbox.bind(this, product.id)}/>
+                                    <span></span>
+                                </label>
                             </td>
                         </tr>
                     )
