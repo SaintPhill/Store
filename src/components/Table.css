@@ -1,0 +1,49 @@
+thead {
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+label::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid red;
+    border-radius: 3px;
+    margin-left: 40px;
+}
+
+.product_name {
+    font-weight: bold;
+}
+
+.product_rating {
+    color: gray;
+    font-weight: bold;
+}
+
+.product_trend {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.product_price {
+    border: 1px solid lightgray;
+    width: 30%;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.product_reviews {
+    margin: 0;
+}
+
+.reviews_container {
+    display: flex;
+    padding-left: 120px;
+}
