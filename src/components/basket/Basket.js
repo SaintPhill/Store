@@ -10,6 +10,7 @@ export default class Basket extends React.Component {
                         <div className="headline">
                             <h1>Ваши товары</h1>
                             <p>Вы выбрали 2 товара: Супер-товар, Тоже хороший товар</p>
+                            <p><a href="/table">Вернуться к покупкам</a></p>
                         </div>
                     </div>
                 </header>

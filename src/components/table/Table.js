@@ -52,7 +52,7 @@ export default class Table extends React.Component {
                             <td>
                                 {product.reviews > 0 ?
                                     <div className='reviews_container'>
-                                        <img src="./icon.png" alt="icon"/>
+                                        <img src="./img/icon.png" alt="icon"/>
                                         <p className='product_reviews'>{product.reviews}</p>
                                     </div> : ''
                                 }
