@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
         <>
-                <Route path={'/basket'} exact component={Basket}/>
+                <Route path={'/shopping_cart'} exact component={Basket}/>
                 <Route path={'/'} exact component={TablePage}/>
         </>
     );

@@ -11,6 +11,16 @@
     margin-bottom: 40px;
 }
 
+.added_products {
+    font-weight: bold;
+}
+
+h2  {
+    margin-bottom: 60px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
 .to_store_btn a {
     color: red;
 }
@@ -28,17 +38,17 @@
 
 .advantage_item {
     height: 74px;
-    width: 340px;
     margin-left: 180px;
 }
 
 .advantage_item .advantage_text {
-    padding-left: 80px;
+    padding: 0 0 0 90px;
 }
 
 .advantage_item:nth-child(1) {
     background: url("/img/advantages1.png") no-repeat left top;
     margin-left: 0;
+    width: 300px;
 }
 .advantage_item:nth-child(2) {
     background: url("/img/advantages2.png") no-repeat left top;

@@ -4,14 +4,8 @@ h1 {
     margin-bottom: 80px;
 }
 
-h2  {
-    margin-bottom: 60px;
-    font-size: 25px;
-    font-weight: bold;
-}
 
 footer {
-    background-color: #3a3a3a;
     margin-top: 60px;
 }
 
@@ -22,36 +16,44 @@ footer {
 
 .footer_text {
     text-align: center;
+    height: 60px;
     color: white;
     margin: 0;
+    padding: 15px 0 15px 0;
 }
-.footer_text p {
-    margin: 0;
+
+.empty_basket p {
+    margin: 4px 0 0 0;
 }
+
+.not_empty_basket > p {
+    width: 200px;
+    text-align: left;
+}
+
 .not_empty_basket {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
     margin: 0 auto;
-    padding: 10px 0 10px 0;
 }
 
-.not_empty_basket div {
+.not_empty_basket .number {
     display: inline-block;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: black;
     color: white;
+    vertical-align: text-top;
+    padding-right: 1px;
+    text-align: center;
 }
 
-.empty_basket p {
-    padding: 20px 0 20px 0;
-}
+
 
 .not_empty_basket a {
-    margin-left: 30px;
     display: block;
     background-color: white;
     text-decoration: none;
@@ -59,4 +61,5 @@ footer {
     border-radius: 30px;
     width: 200px;
     text-transform: uppercase;
+    -webkit-transition: background-color .3s ease-in;
 }
