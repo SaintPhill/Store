@@ -4,7 +4,7 @@ thead {
 }
 
 .w3-table td {
-    padding: 15px 0 15px 0;
+    padding: 15px 0 10px 0;
 }
 
 .w3-table th {
@@ -80,5 +80,7 @@ thead {
     border-radius: 2px;
     width: 23px;
     height: 23px;
-    margin-left: 70px;
+}
+.input_checkbox {
+    margin-left: 70px
 }

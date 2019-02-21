@@ -11,15 +11,16 @@ class Basket extends React.Component {
         return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
     };
 
-
+    endWord = (arr) => {
+        return arr.map((el, i) => {
+            if ((i + 1) !== arr.length) {
+                return el.name + ', '
+            } else return el.name + '.'
+        }).join(' ');
+    };
 
     render() {
         let userBasket = this.props.userBasket;
-        let addedProducts = userBasket.map((el, i) => {
-            if ((i + 1) !== userBasket.length) {
-                return el.name + ', '
-            } else return el.name + '.'
-        });
 
         return (
             <>
@@ -28,7 +29,7 @@ class Basket extends React.Component {
                         <div className="headline">
                             <h1>Ваши товары</h1>
                             <p>Вы выбрали {userBasket.length} { this.declOfNum(userBasket.length, ['товар', 'товара', 'товаров'])}: <span
-                                className='added_products'>{addedProducts.join(' ')}</span>
+                                className='added_products'>{this.endWord(userBasket)}</span>
                             </p>
                             <p className='to_store_btn'><Link to="/">Вернуться к покупкам</Link></p>
                         </div>

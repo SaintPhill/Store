@@ -5,7 +5,9 @@ h1 {
 }
 
 footer {
-    margin-top: 60px;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
 }
 
 .container {
@@ -50,7 +52,7 @@ footer {
     text-align: center;
 }
 
-.not_empty_basket .btn {
+.not_empty_basket a {
     display: block;
     background-color: white;
     text-decoration: none;

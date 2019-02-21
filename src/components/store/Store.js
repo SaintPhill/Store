@@ -15,8 +15,6 @@ class Store extends React.Component {
     };
 
     render() {
-        let products = this.props.products;
-        let userBasket = this.props.userBasket;
         return (
             <>
                 <header>
@@ -26,10 +24,10 @@ class Store extends React.Component {
                 </header>
                 <section>
                     <div className="container">
-                        <Table products={products} handleCheckbox={this.toggleProduct.bind(this)}/>
+                        <Table products={this.props.products} handleCheckbox={this.toggleProduct.bind(this)}/>
                     </div>
                 </section>
-                <StoreFooter userBasket={userBasket}/>
+                <StoreFooter userBasket={this.props.userBasket}/>
             </>
         )
     }

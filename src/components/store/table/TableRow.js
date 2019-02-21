@@ -36,7 +36,7 @@ export default class TableRow extends React.PureComponent {
                             type="checkbox"
                             checked={product.checked}
                             onChange={this.props.handleCheckbox}/>
-                        <span/>
+                        <span className='input_checkbox'/>
                     </label>
                 </td>
             </tr>

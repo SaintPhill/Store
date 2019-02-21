@@ -58,6 +58,7 @@ h2 {
 
 .basket_footer {
     background-color: #ffffff;
+    position: static;
 }
 
 .basket_footer_text {
