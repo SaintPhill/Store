@@ -15,7 +15,7 @@
     font-weight: bold;
 }
 
-h2  {
+h2 {
     margin-bottom: 60px;
     font-size: 25px;
     font-weight: bold;
@@ -25,7 +25,6 @@ h2  {
     color: red;
 }
 
-
 .advantages {
     display: flex;
     align-items: center;
@@ -33,8 +32,6 @@ h2  {
     height: 300px;
     background: url("/img/advantages_bottom.png") no-repeat center bottom;
 }
-
-
 
 .advantage_item {
     height: 74px;
@@ -50,9 +47,11 @@ h2  {
     margin-left: 0;
     width: 300px;
 }
+
 .advantage_item:nth-child(2) {
     background: url("/img/advantages2.png") no-repeat left top;
 }
+
 .advantage_item:nth-child(3) {
     background: url("/img/advantages3.png") no-repeat left top;
 }

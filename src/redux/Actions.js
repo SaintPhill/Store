@@ -3,7 +3,6 @@ export const ACTIONS = {
 };
 
 
-
 export const toggleProduct = (id) => {
     return {
         type: ACTIONS.TOGGLE_PRODUCT,

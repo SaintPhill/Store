@@ -1,4 +1,4 @@
-import { ACTIONS } from './Actions'
+import {ACTIONS} from './Actions'
 
 const initState = {
     products: [
@@ -8,8 +8,6 @@ const initState = {
     ],
     userBasket: [],
 };
-
-
 
 
 function todoReducer(state = initState, action) {

@@ -4,7 +4,6 @@ h1 {
     margin-bottom: 80px;
 }
 
-
 footer {
     margin-top: 60px;
 }
@@ -26,7 +25,7 @@ footer {
     margin: 4px 0 0 0;
 }
 
-.not_empty_basket > p {
+.not_empty_basket > div {
     width: 200px;
     text-align: left;
 }
@@ -51,9 +50,7 @@ footer {
     text-align: center;
 }
 
-
-
-.not_empty_basket a {
+.not_empty_basket .btn {
     display: block;
     background-color: white;
     text-decoration: none;

@@ -5,6 +5,7 @@ import Table from "./table/Table";
 import {toggleProduct} from "../../redux/Actions";
 import store from "../../index";
 import StoreFooter from "./StoreFooter";
+import PropTypes from "prop-types";
 
 
 class Store extends React.Component {
@@ -28,7 +29,7 @@ class Store extends React.Component {
                         <Table products={products} handleCheckbox={this.toggleProduct.bind(this)}/>
                     </div>
                 </section>
-                <StoreFooter userBasket={userBasket} />
+                <StoreFooter userBasket={userBasket}/>
             </>
         )
     }
@@ -42,6 +43,10 @@ function initMapStateToProps(state) {
     }
 }
 
+Store.propTypes = {
+    products: PropTypes.array.isRequired,
+    userBasket: PropTypes.array
+};
 
 
 export default connect(initMapStateToProps)(Store)

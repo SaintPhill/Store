@@ -6,7 +6,8 @@ thead {
 .w3-table td {
     padding: 15px 0 15px 0;
 }
-.w3-table th{
+
+.w3-table th {
     padding: 10px 0 10px 0;
     text-align: right;
 }
@@ -20,26 +21,26 @@ thead {
     width: 200px;
 }
 
-.w3-table th:nth-child(3), .w3-table td:nth-child(3)  {
+.w3-table th:nth-child(3), .w3-table td:nth-child(3) {
     text-align: right;
 }
-.w3-table th:nth-child(4), .w3-table td:nth-child(4)  {
+
+.w3-table th:nth-child(4), .w3-table td:nth-child(4) {
     text-align: right;
 }
-.w3-table th:nth-child(5), .w3-table td:nth-child(5)  {
+
+.w3-table th:nth-child(5), .w3-table td:nth-child(5) {
     text-align: right;
     width: 200px;
 }
-.w3-table th:nth-child(6), .w3-table td:nth-child(6)  {
+
+.w3-table th:nth-child(6), .w3-table td:nth-child(6) {
     width: 300px;
 }
-.w3-table th:nth-child(7), .w3-table td:nth-child(7)  {
+
+.w3-table th:nth-child(7), .w3-table td:nth-child(7) {
     width: 100px;
 }
-
-
-
-
 
 .product_name {
     font-weight: bold;
@@ -51,7 +52,7 @@ thead {
 }
 
 .product_trend {
-    color: rgb(15,175,20);
+    color: rgb(15, 175, 20);
     font-weight: bold;
 }
 

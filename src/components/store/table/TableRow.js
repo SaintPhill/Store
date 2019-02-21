@@ -1,31 +1,32 @@
 import React from 'react'
+import PropTypes from "prop-types";
 
 export default class TableRow extends React.PureComponent {
 
     render() {
-
+        let product = this.props.product;
         return (
             <tr>
                 <td>
                     {this.props.product.id}
                 </td>
                 <td>
-                    <span className='product_name'>{this.props.product.name}</span>
+                    <span className='product_name'>{product.name}</span>
                 </td>
                 <td>
-                    <span className='product_rating'>{this.props.product.rating}</span>
+                    <span className='product_rating'>{product.rating}</span>
                 </td>
                 <td>
-                    <span className='product_trend'>{this.props.product.trend}</span>
+                    <span className='product_trend'>{product.trend}</span>
                 </td>
                 <td>
-                    <div className='product_price'>{this.props.product.price}</div>
+                    <div className='product_price'>{product.price}</div>
                 </td>
                 <td>
-                    {this.props.product.reviews > 0 ?
+                    {product.reviews > 0 ?
                         <div className='reviews_container'>
                             <img src="./img/icon.png" alt="icon"/>
-                            <p className='product_reviews'>{this.props.product.reviews}</p>
+                            <p className='product_reviews'>{product.reviews}</p>
                         </div> : ''
                     }
                 </td>
@@ -33,7 +34,7 @@ export default class TableRow extends React.PureComponent {
                     <label>
                         <input
                             type="checkbox"
-                            checked={this.props.product.checked}
+                            checked={product.checked}
                             onChange={this.props.handleCheckbox}/>
                         <span/>
                     </label>
@@ -42,3 +43,8 @@ export default class TableRow extends React.PureComponent {
         )
     }
 }
+
+TableRow.propTypes = {
+    product: PropTypes.object.isRequired,
+    handleCheckbox: PropTypes.func.isRequired
+};

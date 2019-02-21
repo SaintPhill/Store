@@ -2,6 +2,7 @@ import React from 'react'
 import './Table.css'
 import TableHead from "./TableHead";
 import TableRow from "./TableRow";
+import PropTypes from 'prop-types'
 
 export default class Table extends React.PureComponent {
     render() {
@@ -11,7 +12,7 @@ export default class Table extends React.PureComponent {
                 <tbody>
                 {this.props.products.map((product) => {
                     return (
-                        <TableRow handleCheckbox={this.props.handleCheckbox.bind(this, product.id)} id={product.id}
+                        <TableRow handleCheckbox={this.props.handleCheckbox.bind(this, product.id)} key={product.id}
                                   product={product}/>
 
                     )
@@ -21,3 +22,8 @@ export default class Table extends React.PureComponent {
         )
     }
 }
+
+Table.propTypes = {
+    products: PropTypes.array.isRequired,
+    handleCheckbox: PropTypes.func.isRequired
+};

@@ -2,19 +2,21 @@ import React from 'react'
 import './Basket.css'
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
 class Basket extends React.Component {
 
     declOfNum = (number, titles) => {
         let cases = [2, 0, 1, 1, 1, 2];
-        return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
+        return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
     };
+
+
 
     render() {
         let userBasket = this.props.userBasket;
-        let productsText = this.declOfNum(userBasket.length, ['товар', 'товара', 'товаров']);
-        let addedProducts = userBasket.map((el,i) => {
-            if((i+1) !== userBasket.length) {
+        let addedProducts = userBasket.map((el, i) => {
+            if ((i + 1) !== userBasket.length) {
                 return el.name + ', '
             } else return el.name + '.'
         });
@@ -25,7 +27,8 @@ class Basket extends React.Component {
                     <div className="container">
                         <div className="headline">
                             <h1>Ваши товары</h1>
-                            <p>Вы выбрали {userBasket.length} {productsText}: <span className='added_products'>{addedProducts.join(' ')}</span>
+                            <p>Вы выбрали {userBasket.length} { this.declOfNum(userBasket.length, ['товар', 'товара', 'товаров'])}: <span
+                                className='added_products'>{addedProducts.join(' ')}</span>
                             </p>
                             <p className='to_store_btn'><Link to="/">Вернуться к покупкам</Link></p>
                         </div>
@@ -63,6 +66,9 @@ function initMapStateToProps(state) {
     }
 }
 
+Basket.propTypes = {
+    userBasket: PropTypes.array.isRequired
+};
 
 
 export default connect(initMapStateToProps)(Basket)
