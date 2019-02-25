@@ -3,16 +3,11 @@ import './Store.css'
 import {connect} from "react-redux";
 import Table from "./table/Table";
 import {toggleProduct} from "../../redux/Actions";
-import store from "../../index";
 import StoreFooter from "./StoreFooter";
 import PropTypes from "prop-types";
 
 
 class Store extends React.Component {
-
-    toggleProduct = (i) => {
-        store.dispatch(toggleProduct(i));
-    };
 
     render() {
         return (
@@ -24,7 +19,7 @@ class Store extends React.Component {
                 </header>
                 <section>
                     <div className="container">
-                        <Table products={this.props.products} handleCheckbox={this.toggleProduct.bind(this)}/>
+                        <Table products={this.props.products} handleCheckbox={this.props.toggleProduct.bind(this)}/>
                     </div>
                 </section>
                 <StoreFooter userBasket={this.props.userBasket}/>
@@ -41,10 +36,17 @@ function initMapStateToProps(state) {
     }
 }
 
+function initMapDispatchToProps(dispatch) {
+    return {
+        toggleProduct: (index) => dispatch(toggleProduct(index))
+    }
+};
+
 Store.propTypes = {
     products: PropTypes.array.isRequired,
-    userBasket: PropTypes.array
+    userBasket: PropTypes.array,
+    toggleProduct: PropTypes.func.isRequired
 };
 
 
-export default connect(initMapStateToProps)(Store)
+export default connect(initMapStateToProps,initMapDispatchToProps)(Store)
